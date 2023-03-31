@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: url("../green-slate.jpg");
+
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.column {
+  flex: 1;
+  background-color: #212529;
+  padding: 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.task {
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 5px;
+  padding: 10px 0;
+  padding-left: 15px;
+  overflow-wrap: anywhere;
+  cursor: move;
+}
+
+.task-content {
+  position: relative;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.task-edit,
+.task-delete {
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.task-edit {
+  background-color: #868e96;
+}
+
+.task-edit:hover {
+  background-color: #495057;
+  color: mediumspringgreen;
+}
+
+.task-delete {
+  background-color: #868e96;
+}
+.task-delete:hover {
+  background-color: #495057;
+  color: crimson;
+}
+
+.drop-area {
+  height: 10px;
+  transition: background 0.3s ease, height 0.3s ease;
+}
+
+.drop-area-active {
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.add-task {
+  color: #fff;
+  background-color: #868e96;
+  font-size: 16px;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.add-task:hover {
+  background-color: #495057;
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .column {
+    margin: 10px 0;
+  }
+}
